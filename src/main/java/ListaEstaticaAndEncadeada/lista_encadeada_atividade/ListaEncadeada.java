@@ -4,7 +4,7 @@ public class ListaEncadeada<T> {
 
     private T info;
 
-    private NoListaGenerica<T> primeiro;
+    private NoListaGenerica<T> primeiro , ultimo;
 
     public ListaEncadeada() {
         this.primeiro = null;
@@ -14,11 +14,35 @@ public class ListaEncadeada<T> {
         return this.primeiro;
     }
 
+    public NoListaGenerica<T> getUltimo() {
+        return ultimo;
+    }
+
     public void inserir(T info) {
         NoListaGenerica<T> novo = new NoListaGenerica<>();
         novo.setInfo(info);
         novo.setProximo(getPrimeiro());
+
+        if(estaVazia()){
+            ultimo = novo;
+        }
+
         this.primeiro = novo;
+    }
+
+    public void inserirNoFinal(T info){
+        NoListaGenerica<T> novo = new NoListaGenerica<>();
+        novo.setInfo(info);
+        novo.setProximo(null);
+
+        if(estaVazia()){
+            primeiro = novo;
+        } else {
+            ultimo.setProximo(novo);
+        }
+
+        ultimo = novo;
+
     }
 
     public boolean estaVazia() {
@@ -104,12 +128,11 @@ public class ListaEncadeada<T> {
         NoListaGenerica<T> atual = primeiro;
 
         while (atual != null) {
-            NoListaGenerica proximo = atual.getProximo();
+            NoListaGenerica<T> proximo = atual.getProximo();
             atual.setProximo(null);
             atual = proximo;
         }
         primeiro = null;
 
     }
-
 }
