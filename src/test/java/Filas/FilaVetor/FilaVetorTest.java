@@ -101,7 +101,7 @@ public class FilaVetorTest {
         FilaVetor<Integer> filaConcatenada = fila.criarFilaConcatenada(fila2);
 
         assertEquals(filaConcatenada.toString(), " 10; 20; 30; 40; 50;");
-        assertEquals(filaConcatenada.peak().intValue(), 5);
+        assertEquals(filaConcatenada.peak().intValue(), 10);
 
     }
 
