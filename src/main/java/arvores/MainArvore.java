@@ -1,23 +1,23 @@
 package arvores;
 
-import arvores.binaria.ArvoreBinaria;
-import arvores.binaria.NoArvoreBinaria;
+import arvores.binaria.exemplos.ArvoreBinariaInteiros;
+import arvores.binaria.exemplos.NoArvoreBinariaInteiro;
 
 public class MainArvore {
     public static void main(String[] args) {
 
-        NoArvoreBinaria no4 = new NoArvoreBinaria(4);
-        NoArvoreBinaria no5 = new NoArvoreBinaria(5);
-        NoArvoreBinaria no2 = new NoArvoreBinaria(2 , no4 , no5);
+        NoArvoreBinariaInteiro no4 = new NoArvoreBinariaInteiro(4);
+        NoArvoreBinariaInteiro no5 = new NoArvoreBinariaInteiro(5);
+        NoArvoreBinariaInteiro no2 = new NoArvoreBinariaInteiro(2 , no4 , no5);
 
-        NoArvoreBinaria no7 = new NoArvoreBinaria(7);
-        NoArvoreBinaria no6 = new NoArvoreBinaria(6 , no7 , null);
+        NoArvoreBinariaInteiro no7 = new NoArvoreBinariaInteiro(7);
+        NoArvoreBinariaInteiro no6 = new NoArvoreBinariaInteiro(6 , no7 , null);
 
-        NoArvoreBinaria no3 = new NoArvoreBinaria(3 , null, no6);
+        NoArvoreBinariaInteiro no3 = new NoArvoreBinariaInteiro(3 , null, no6);
 
-        NoArvoreBinaria no1 = new NoArvoreBinaria(1 , no2 , no3 );
+        NoArvoreBinariaInteiro no1 = new NoArvoreBinariaInteiro(1 , no2 , no3 );
 
-        ArvoreBinaria arvore = new ArvoreBinaria();
+        ArvoreBinariaInteiros arvore = new ArvoreBinariaInteiros();
 
         arvore.setRaiz(no1);
 

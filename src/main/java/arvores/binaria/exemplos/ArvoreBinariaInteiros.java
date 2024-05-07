@@ -1,14 +1,14 @@
-package arvores.binaria;
+package arvores.binaria.exemplos;
 
-public class ArvoreBinaria {
+public class ArvoreBinariaInteiros {
 
-    private NoArvoreBinaria raiz;
+    private NoArvoreBinariaInteiro raiz;
 
-    public NoArvoreBinaria getRaiz() {
+    public NoArvoreBinariaInteiro getRaiz() {
         return raiz;
     }
 
-    public void setRaiz(NoArvoreBinaria raiz) {
+    public void setRaiz(NoArvoreBinariaInteiro raiz) {
         this.raiz = raiz;
     }
 
@@ -20,7 +20,7 @@ public class ArvoreBinaria {
         return pertence(raiz, info);
     }
 
-    private boolean pertence(NoArvoreBinaria no, int info) {
+    private boolean pertence(NoArvoreBinariaInteiro no, int info) {
         if (no == null) {
             return false;
         } else {
@@ -30,7 +30,7 @@ public class ArvoreBinaria {
         }
     }
 
-    private String arvorePre(NoArvoreBinaria no) {
+    private String arvorePre(NoArvoreBinariaInteiro no) {
         if (no == null) {
             return "<>";
         } else {
