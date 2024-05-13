@@ -1,7 +1,5 @@
 package arvores.binaria.atividade;
 
-import arvores.binaria.exemplos.NoArvoreBinariaInteiro;
-
 public class NoArvoreBinaria<T> {
 
     private T info;
@@ -12,7 +10,7 @@ public class NoArvoreBinaria<T> {
         this.info = info;
     }
 
-    public NoArvoreBinaria(T info, NoArvoreBinaria<T> direita, NoArvoreBinaria<T> esquerda) {
+    public NoArvoreBinaria(T info, NoArvoreBinaria<T> esquerda, NoArvoreBinaria<T> direita) {
         this.info = info;
         this.direita = direita;
         this.esquerda = esquerda;
@@ -26,19 +24,19 @@ public class NoArvoreBinaria<T> {
         this.info = info;
     }
 
-    public NoArvoreBinaria getEsquerda() {
+    public NoArvoreBinaria<T> getEsquerda() {
         return esquerda;
     }
 
-    public void setEsquerda(NoArvoreBinaria esquerda) {
+    public void setEsquerda(NoArvoreBinaria<T> esquerda) {
         this.esquerda = esquerda;
     }
 
-    public NoArvoreBinaria getDireita() {
+    public NoArvoreBinaria<T> getDireita() {
         return direita;
     }
 
-    public void setDireita(NoArvoreBinaria direita) {
+    public void setDireita(NoArvoreBinaria<T> direita) {
         this.direita = direita;
     }
 
