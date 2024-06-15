@@ -21,6 +21,7 @@ public class ArvoreBinaria<T> {
     }
 
     private boolean pertence(NoArvoreBinaria<T> no, T info) {
+        System.out.println(1);
         if (no == null) {
             return false;
         } else {
@@ -54,6 +55,30 @@ public class ArvoreBinaria<T> {
         } else {
             return 1 + contarNos(no.getEsquerda()) + contarNos(no.getDireita());
         }
+    }
+
+    public boolean isDegenerada() {
+        if(contarNos() <= 1){
+            return false;
+        }
+
+        NoArvoreBinaria arvore = raiz;
+
+        Boolean isDegenerada = true;
+
+        while (arvore != null) {
+            if (arvore.getEsquerda() != null && arvore.getDireita() != null) {
+                return false;
+            }
+            if (arvore.getDireita() != null) {
+                arvore = arvore.getDireita();
+            } else {
+                arvore = arvore.getEsquerda();
+            }
+        }
+
+        return isDegenerada;
+
     }
 
 }

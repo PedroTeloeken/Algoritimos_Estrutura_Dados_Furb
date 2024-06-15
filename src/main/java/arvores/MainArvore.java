@@ -25,40 +25,13 @@ public class MainArvore {
 
         System.out.println(arvore.toString());*/
 
-        NoArvoreEnaria no4 = new NoArvoreEnaria(4);
-        NoArvoreEnaria no3 = new NoArvoreEnaria(3);
-        no3.inserirFilho(no4);
+        NoArvoreEnaria no80 = new NoArvoreEnaria(80);
+        NoArvoreEnaria no = new NoArvoreEnaria(80);
 
-        NoArvoreEnaria no5 = new NoArvoreEnaria(5);
 
-        NoArvoreEnaria no2 = new NoArvoreEnaria(2);
-        no2.inserirFilho(no5);
-        no2.inserirFilho(no3);
+        //System.out.println("Total nos = " + arvore.contarNos() );
 
-        NoArvoreEnaria no10 = new NoArvoreEnaria(10);
-        NoArvoreEnaria no9 = new NoArvoreEnaria(9);
-        no9.inserirFilho(no10);
-
-        NoArvoreEnaria no8 = new NoArvoreEnaria(8);
-
-        NoArvoreEnaria no7 = new NoArvoreEnaria(7);
-        no7.inserirFilho(no9);
-        no7.inserirFilho(no8);
-
-        NoArvoreEnaria no6 = new NoArvoreEnaria(6);
-
-        NoArvoreEnaria no1 = new NoArvoreEnaria(1);
-
-        no1.inserirFilho(no7);
-        no1.inserirFilho(no6);
-        no1.inserirFilho(no2);
-
-        ArvoreEnaria arvore = new ArvoreEnaria();
-        arvore.setRaiz(no1);
-
-        System.out.println("Total nos = " + arvore.contarNos() );
-
-        System.out.println(arvore.toString());
+       // System.out.println(arvore.toString());
 
     }
 }

@@ -3,23 +3,18 @@ package Pilhas.Atividades;
 public class MainPilha {
     public static void main(String[] args) {
 
-        PilhaVetor<Integer> lista1 = new PilhaVetor<>(10);
+        PilhaVetor<Integer> lista = new PilhaVetor<>(10);
 
-        lista1.push(1);
-        lista1.push(2);
-        lista1.push(3);
+        lista.push(10);
+        lista.push(20);
+        lista.push(30);
+        lista.push(40);
+        lista.pop();
+        lista.pop();
+        lista.push(lista.peek());
+        lista.push(50);
 
-        System.out.println(lista1.toString());
-
-        PilhaVetor<Integer> lista2 = new PilhaVetor<>(10);
-
-        lista2.push(4);
-        lista2.push(5);
-        lista2.push(6);
-
-        lista1.concatenar(lista2);
-
-        System.out.println(lista1.toString());
+        System.out.println(lista.toString());
 
 
     }

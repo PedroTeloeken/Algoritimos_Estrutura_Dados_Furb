@@ -1,8 +1,5 @@
 package arvores.enaria.atividade;
 
-import arvores.binaria.atividade.NoArvoreBinaria;
-import arvores.enaria.exemplos.NoArvoreEnariaInteiros;
-
 public class ArvoreEnaria <T> {
 
     private NoArvoreEnaria<T> raiz;
@@ -59,18 +56,6 @@ public class ArvoreEnaria <T> {
         representacaoTextual += ">";
 
         return representacaoTextual;
-    }
-
-    private String obterRepresentacaoTextual2(NoArvoreEnaria<T> no) {
-        String representacaoTextual = "<" + no.getInfo();
-
-        NoArvoreEnaria<T> atual = no.getPrimeiro();
-        while (atual != null) {
-            representacaoTextual += obterRepresentacaoTextual2(atual);
-            atual = atual.getProximo();
-        }
-
-        return representacaoTextual += ">";
     }
 
     public int contarNos() {

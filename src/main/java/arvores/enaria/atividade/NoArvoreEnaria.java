@@ -1,6 +1,5 @@
 package arvores.enaria.atividade;
 
-import arvores.enaria.exemplos.NoArvoreEnariaInteiros;
 
 public class NoArvoreEnaria<T> {
 

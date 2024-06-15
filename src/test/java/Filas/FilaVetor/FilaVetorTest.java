@@ -87,6 +87,7 @@ public class FilaVetorTest {
 
     @Test
     public void TesteConcatenar() {
+
         FilaVetor<Integer> fila = new FilaVetor<>(5);
 
         fila.inserir(10);
@@ -102,6 +103,30 @@ public class FilaVetorTest {
 
         assertEquals(filaConcatenada.toString(), " 10; 20; 30; 40; 50;");
         assertEquals(filaConcatenada.peak().intValue(), 10);
+
+    }
+
+    @Test
+    public void TesteConcatenar222() {
+
+        FilaVetor<Integer> fila = new FilaVetor<>(10);
+
+        fila.inserir(1);
+        fila.inserir(2);
+        fila.inserir(3);
+        fila.inserir(4);
+        fila.retirar();
+        fila.inserir(10);
+        assertEquals(fila.limite, 10);
+
+
+        fila.encolher();
+        assertEquals(fila.limite, 4);
+
+       assertEquals(fila.tamanho, 4);
+        //assertEquals(fila.limite, 4);
+
+        // assertEquals(fila.toString() , "");
 
     }
 

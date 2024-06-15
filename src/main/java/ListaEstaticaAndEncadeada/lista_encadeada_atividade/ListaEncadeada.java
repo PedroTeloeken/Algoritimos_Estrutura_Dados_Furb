@@ -14,10 +14,6 @@ public class ListaEncadeada<T> {
         return this.primeiro;
     }
 
-    public NoListaGenerica<T> getUltimo() {
-        return ultimo;
-    }
-
     public void inserir(T info) {
         NoListaGenerica<T> novo = new NoListaGenerica<>();
         novo.setInfo(info);

@@ -5,6 +5,11 @@ public class FilaVetor<T> implements Fila<T> {
     T[] info;
     int limite;
     int tamanho;
+
+    public int getInicio() {
+        return inicio;
+    }
+
     int inicio;
 
     public FilaVetor(int limite) {
@@ -87,12 +92,26 @@ public class FilaVetor<T> implements Fila<T> {
         String texto = "";
 
         for (int i = 0; i < this.limite; i++) {
-            if(info[i] != null) {
+            if (info[i] != null) {
                 texto += " " + info[i].toString() + ";";
             }
         }
 
         return texto;
+    }
+
+
+    public void encolher() {
+        Object[] filaEncolhida = new Object[tamanho];
+
+        for (int i = 0; i < tamanho; i++) {
+            filaEncolhida[i] = info[(inicio + i) % limite];
+        }
+
+        info = (T[]) filaEncolhida;
+        limite = tamanho;
+        inicio = 0;
+
     }
 
 }
