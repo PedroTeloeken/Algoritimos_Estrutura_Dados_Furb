@@ -1,10 +1,11 @@
-package mapa;
+package fé.mapa;
 
 import java.util.Objects;
 
-public class NoMapa<T> {
+public class EstudoNoMapa <T> {
 
     private int chave;
+
     private T info;
 
     public int getChave() {
@@ -27,7 +28,7 @@ public class NoMapa<T> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        NoMapa<?> noMapa = (NoMapa<?>) o;
+        EstudoNoMapa<?> noMapa = (EstudoNoMapa<?>) o;
         return chave == noMapa.chave;
     }
 

@@ -1,5 +1,7 @@
 package ListaEstaticaAndEncadeada.lista_encadeada_atividade;
 
+import java.util.Objects;
+
 public class ListaEncadeada<T> {
 
     private T info;
@@ -129,6 +131,18 @@ public class ListaEncadeada<T> {
             atual = proximo;
         }
         primeiro = null;
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ListaEncadeada<T> that = (ListaEncadeada<T>) o;
+        return Objects.equals(info, that.info) && Objects.equals(primeiro, that.primeiro) && Objects.equals(ultimo, that.ultimo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(info, primeiro, ultimo);
     }
 }

@@ -1,13 +1,18 @@
-package busca;
+package fé.arvore;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ArvoreBinariaBuscaTest {
+public class EstudoArvoreBinariaBusca2Test {
 
-    private ArvoreBinariaBusca<Integer> arvore = new ArvoreBinariaBusca<>();
+    private EstudoArvoreBinariaBusca<Integer> arvore = new EstudoArvoreBinariaBusca<>();
 
+    /**
+     * Valida que os dados sao inseridos
+     * mantendo a arvore com a carateristica
+     * de ser uma arvore bin�ria de busca
+     */
     @Test
     public void test1Insercao() {
         arvore.inserir(50);
@@ -23,19 +28,20 @@ public class ArvoreBinariaBuscaTest {
                 arvore.toString());
     }
 
+
+    /**
+     * Teste de remo��o de folhas
+     */
     @Test
     public void test2RemoverFolha() {
         arvore.inserir(50);
-        arvore.inserir(20);
-        arvore.inserir(70);
-        arvore.inserir(10);
-        arvore.inserir(35);
-        arvore.inserir(60);
-        arvore.inserir(60);
-
-
+        arvore.inserir(30);
+        arvore.inserir(25);
+        arvore.inserir(40);
+        arvore.retirar(40);
         assertEquals("<50<30<25<><>><>><>>", arvore.toString());
     }
+
 
     @Test
     public void test3RemoverNoUmFilho() {
@@ -67,5 +73,16 @@ public class ArvoreBinariaBuscaTest {
         arvore.retirar(38);
         assertEquals("<250<41<26<><>><72<55<43<><>><60<><>>><90<78<74<><>><>><92<><>>>>><>>", arvore.toString());
     }
+
+    @Test
+    public void test4RemoverNoDoisFilhos2() {
+        arvore.inserir(250);
+        arvore.inserir(240);
+        arvore.inserir(260);
+        arvore.inserir(260);
+        arvore.inserir(261);
+        assertEquals("<250<41<26<><>><72<55<43<><>><60<><>>><90<78<74<><>><>><92<><>>>>><>>", arvore.toString());
+    }
+
 
 }
